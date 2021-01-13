@@ -1,0 +1,92 @@
+<div class="px-4 px-lg-0" *ngIf="cartItems.length>0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-8">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="border-0 bg-light">
+                                    <div class="p-2 px-3 text-uppercase">Product</div>
+                                </th>
+                                <th scope="col" class="border-0 bg-light">
+                                    <div class="py-2 text-uppercase">Price</div>
+                                </th>
+                                <th scope="col" class="border-0 bg-light">
+                                    <div class="py-2 text-uppercase">Quantity</div>
+                                </th>
+                                <th scope="col" class="border-0 bg-light">
+                                    <div class="py-2 text-uppercase">Remove</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let cartItem of cartItems; let i = index">
+                                <th class="border-0">
+                                    <div class="p-2">
+                                        <img src="{{cartItem?.image}}" alt="" width="70"
+                                            class="img-fluid rounded shadow-sm">
+                                        <div class="ml-3 d-inline-block align-middle">
+                                            <h5 class="mb-0"> <a routerLink="/product-detail/{{cartItem.productId}}"
+                                                    class="text-dark d-inline-block align-middle">{{cartItem?.name}}</a>
+                                            </h5><span
+                                                class="text-muted font-weight-normal font-italic d-block">{{cartItem?.description}}</span>
+                                        </div>
+                                    </div>
+                                </th>
+                                <td class="border-0 align-middle"><strong>{{cartItem?.price}}</strong>
+                                </td>
+                                <td class="border-0 align-middle">
+                                    <strong>
+                                        <input #productQuantityIncrement type="number" min="1" class="form-control"
+                                            value="{{cartItem?.quantity}}"
+                                            (change)="addCartItemIncrement(i, productQuantityIncrement.value)">
+                                    </strong>
+                                </td>
+                                <td class="border-0 align-middle">
+                                    <img src="../../assets/icons/remove.png" (click)="deleteCartItem(cartItem?.id)"
+                                        height="28px">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <div class="bg-light px-4 py-4 text-uppercase font-weight-bold">Order summary </div>
+                <div class="p-4">
+                    <div class="alert alert-info" role="alert">
+                        Shipping and additional costs are calculated based on values you have entered.
+                    </div>
+                    <ul class="list-unstyled mb-4">
+                        <li class="d-flex justify-content-between py-3 border-bottom">
+                            <strong class="text-muted">Order Subtotal</strong>
+                            <strong>{{orderSubTotal | currency:'INR':'symbol-narrow'}}</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-3 border-bottom">
+                            <strong class="text-muted">Shipping and handling</strong>
+                            <strong>{{shippingPrice | currency:'INR':'symbol-narrow'}}</strong>
+                        </li>
+                        <li class="d-flex justify-content-between py-3 border-bottom">
+                            <strong class="text-muted">Total</strong>
+                            <h5 class="font-weight-bold">{{cartOrderTotal | currency:'INR':'symbol-narrow'}}</h5>
+                        </li>
+                    </ul>
+                    <span class="btn btn-success py-2 btn-block">Procceed to checkout</span>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="px-4 px-lg-0" *ngIf="cartItems.length==0">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-primary" role="alert">
+                    Your Cart is Empty! Please continue shopping!!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

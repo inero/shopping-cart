@@ -1,0 +1,28 @@
+<div class="container pt-4 pb-4" *ngIf="productList">
+    <h3>Mobiles & Accessories</h3>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 mb-6" *ngFor="let product of productList">
+                    <div class="card h-100">
+                        <a routerLink="/product-detail/{{product.id}}">
+                            <img class="card-img-top" src="{{product.image}}" alt="" height="200px" />
+                        </a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a routerLink="/product-detail/{{product.id}}">{{ product.name }}</a>
+                            </h4>
+                            <h5>{{ product.price | currency:'INR':'symbol-narrow'}}</h5>
+                            <p class="card-text">{{ product.description }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-block" (click)="addToCart(product, '1')">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

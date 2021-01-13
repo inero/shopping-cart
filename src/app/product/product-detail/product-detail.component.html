@@ -1,0 +1,29 @@
+<div class="container" style="padding-top: 50px;" *ngIf="productItemData">
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-fluid" src="{{productItemData.image}}" alt="" width="250px" height="100px">
+        </div>
+        <div class="col-lg-4">
+            <h3 class="card-title">{{productItemData.name}}</h3>
+            <h4>{{productItemData.price | currency:'INR':'symbol-narrow'}}</h4>
+            <p class="card-text">{{productItemData.description}}</p>
+        </div>
+        <div class="col-lg-4">
+            <div class="card card-outline-secondary my-4">
+                <div class="card-header">
+                    Cart Section
+                </div>
+                <div class="card-body">
+                    <div class="input-group mb-3">
+                        <input type="number" [value]="productItemData.quantity" min="1" name="orderQuantity" class="form-control" #orderQuantity>
+                        <div class="input-group-append">
+                            <button class="btn btn-success" (click)="addToCart(productItemData, orderQuantity.value)">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,155 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Bluetooth Earphone 001",
+      "description": "Bluetooth Earphone",
+      "price": 1000,
+      "quantity": 1,
+      "image": "../../assets/images/bluetooth-earphone-01.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 2,
+      "name": "Bluetooth Earphone 002",
+      "description": "Bluetooth Earphone",
+      "price": 1100,
+      "quantity": 1,
+      "image": "../../assets/images/bluetooth-earphone-02.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 3,
+      "name": "Bluetooth Earphone 003",
+      "description": "Bluetooth Earphone",
+      "price": 700,
+      "quantity": 1,
+      "image": "../../assets/images/bluetooth-earphone-03.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 4,
+      "name": "Earphone 001",
+      "description": "Earphone",
+      "price": 500,
+      "quantity": 1,
+      "image": "../../assets/images/earphone-01.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 5,
+      "name": "Earphone 002",
+      "description": "Earphone",
+      "price": 350,
+      "quantity": 1,
+      "image": "../../assets/images/earphone-02.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 6,
+      "name": "Earphone 003",
+      "description": "Earphone",
+      "price": 450,
+      "quantity": 1,
+      "image": "../../assets/images/earphone-03.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 7,
+      "name": "Charger 01",
+      "description": "Charger",
+      "price": 300,
+      "quantity": 1,
+      "image": "../../assets/images/charger-01.jpeg",
+      "category": "Charger"
+    },
+    {
+      "id": 8,
+      "name": "Charger 02",
+      "description": "Charger",
+      "price": 400,
+      "quantity": 1,
+      "image": "../../assets/images/charger-02.jpeg",
+      "category": "Charger"
+    },
+    {
+      "id": 9,
+      "name": "Power Bank 01",
+      "description": "Power Bank",
+      "price": 600,
+      "quantity": 1,
+      "image": "../../assets/images/power-bank-01.jpeg",
+      "category": "Power Bank"
+    },
+    {
+      "id": 10,
+      "name": "Earphone 004",
+      "description": "Earphone",
+      "price": 400,
+      "quantity": 1,
+      "image": "../../assets/images/earphone-04.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 11,
+      "name": "Earphone 004",
+      "description": "Earphone",
+      "price": 500,
+      "quantity": 1,
+      "image": "../../assets/images/earphone-05.jpeg",
+      "category": "Earphone"
+    },
+    {
+      "id": 12,
+      "name": "Speaker 001",
+      "description": "Speaker",
+      "price": 1200,
+      "quantity": 1,
+      "image": "../../assets/images/speaker-01.jpeg",
+      "category": "Speaker"
+    },
+    {
+      "id": 13,
+      "name": "Speaker 002",
+      "description": "Speaker",
+      "price": 1000,
+      "quantity": 1,
+      "image": "../../assets/images/speaker-02.jpeg",
+      "category": "Speaker"
+    },
+    {
+      "id": 14,
+      "name": "Speaker 003",
+      "description": "Speaker",
+      "price": 800,
+      "quantity": 1,
+      "image": "../../assets/images/speaker-03.jpeg",
+      "category": "Speaker"
+    },
+    {
+      "id": 15,
+      "name": "Woofer 001",
+      "description": "Woofer",
+      "price": 2000,
+      "quantity": 1,
+      "image": "../../assets/images/woofer-01.jpeg",
+      "category": "Speaker"
+    }
+  ],
+  "cart": [
+    {
+      "productId": 1,
+      "userId": 1,
+      "quantity": 1,
+      "price": 1000,
+      "name": "Bluetooth Earphone 001",
+      "image": "../../assets/images/bluetooth-earphone-01.jpeg",
+      "orderDate": "2021-1-13 18:51",
+      "description": "Bluetooth Earphone",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "Roshan"
+  }
+}
